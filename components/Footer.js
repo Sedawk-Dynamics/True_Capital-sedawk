@@ -47,7 +47,7 @@ export default function Footer() {
             <Link href="/services">Loans</Link>
             <Link href="/calculator">EMI Calculator</Link>
             <Link href="/cibil">Check CIBIL Score</Link>
-            <Link href="/apply">Apply for Loan</Link>
+            <Link href="/apply">Become Our Partner</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>

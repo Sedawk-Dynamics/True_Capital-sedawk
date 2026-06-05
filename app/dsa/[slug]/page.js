@@ -15,7 +15,7 @@ export function generateMetadata({ params }) {
   if (!dsa) return { title: "DSA Partner" };
   return {
     title: dsa.t,
-    description: `Become a ${dsa.t} with True Capital & Advisory. ${dsa.d} Quick onboarding, training and transparent payouts across 40+ lenders.`,
+    description: `Become a ${dsa.t} with True Capital & Advisory. ${dsa.d} Quick onboarding, training and transparent payouts across 50+ lenders.`,
   };
 }
 
@@ -48,7 +48,7 @@ export default function DsaSlugPage({ params }) {
         <h3 style={{ fontSize: 22, marginBottom: 10 }}>What is a {dsa.t}?</h3>
         <p style={{ color: "var(--muted)" }}>
           As a {dsa.t} with True Capital &amp; Advisory, you refer customers looking for a {dsa.product.toLowerCase()} and
-          we handle the rest — lender selection, documentation and processing across our network of 40+ banks and NBFCs.
+          we handle the rest — lender selection, documentation and processing across our network of 50+ banks and NBFCs.
           You earn an attractive commission on every successfully disbursed case, with full support and transparent tracking.
         </p>
       </div>

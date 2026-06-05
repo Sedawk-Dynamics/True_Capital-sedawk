@@ -43,7 +43,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
       {/*
         Analytics & tracking integration points (paste your tags here):
         - Google Analytics (GA4): add <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"/> + config
@@ -52,6 +52,12 @@ export default function RootLayout({ children }) {
         Use next/script with strategy="afterInteractive".
       */}
       <body>
+        {/* set theme before first paint — defaults to dark, remembers the user's choice */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('tc-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}`,
+          }}
+        />
         <LeadProvider>
           <Navbar />
           <ScrollReveal />

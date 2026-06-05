@@ -56,10 +56,10 @@ export default function HomePage() {
       <div className="stats section-sm">
         <div className="container">
           <div className="grid g-4">
-            <Stat to={30} suffix="+" label="Years Combined Experience" />
+            <Stat to={15} suffix="+" label="Years Combined Experience" />
             <Stat to={17} suffix="+" label="Loan & Finance Products" />
             <Stat to={2500} suffix="+" label="Clients Served" />
-            <Stat to={40} suffix="+" label="Partner Lenders" />
+            <Stat to={50} suffix="+" label="Partner Lenders" />
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
       <div className="section container">
         <SectionHead
           eyebrow="What we offer"
-          title={<>Loan &amp; Financial <span className="grad">Services</span></>}
+          title={<>We Are Dealing With Financial Products That Suit <span className="grad">Customer Needs</span></>}
           sub="From home and personal loans to MSME finance, advisory and insurance — one trusted partner for every financial need."
         />
         <div className="grid g-3">

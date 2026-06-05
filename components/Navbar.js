@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Brand from "./Brand";
 import Icon from "./Icon";
+import ThemeToggle from "./ThemeToggle";
 import { COMPANY, DSA_TYPES } from "@/lib/data";
 
 const LINKS = [
@@ -11,7 +12,7 @@ const LINKS = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Loans" },
   { href: "/dsa", label: "DSA", children: DSA_TYPES.map((d) => ({ href: `/dsa/${d.slug}`, label: d.t })) },
-  { href: "/apply", label: "Apply for Loan" },
+  { href: "/apply", label: "Become Our Partner" },
   { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -74,6 +75,11 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-cta">
+          <ThemeToggle />
+          <Link href="/cibil" className="btn btn-sm nav-cibil" aria-label="Check CIBIL Score">
+            <Icon name="verify" strokeWidth={2} />
+            CIBIL Score
+          </Link>
           <a href={`tel:${COMPANY.phoneIntl}`} className="btn btn-ghost btn-sm" aria-label="Call now">
             <Icon name="phone" strokeWidth={2} />
             Call

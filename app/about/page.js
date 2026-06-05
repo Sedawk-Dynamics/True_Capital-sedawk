@@ -22,7 +22,7 @@ export default function AboutPage() {
       <div className="center reveal" style={{ marginTop: -18, marginBottom: 56 }}>
         <div className="trust-strip" style={{ marginTop: 0, justifyContent: "center" }}>
           <span><Icon name="check" strokeWidth={2} /> Pan-India Reach</span>
-          <span><Icon name="check" strokeWidth={2} /> 40+ Lending Partners</span>
+          <span><Icon name="check" strokeWidth={2} /> 50+ Lending Partners</span>
           <span><Icon name="check" strokeWidth={2} /> Transparent &amp; Compliant Process</span>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
         <div className="reg-list">
           <div className="ri"><div className="l">Company Name</div><div className="v">True Capital &amp; Advisory Pvt Ltd</div></div>
           <div className="ri"><div className="l">Incorporated</div><div className="v">2026, India</div></div>
-          <div className="ri"><div className="l">CIN / Registration No.</div><div className="v">To be added</div></div>
+          <div className="ri"><div className="l">CIN / Registration No.</div><div className="v">U64990UT2026PTC021056</div></div>
           <div className="ri"><div className="l">GSTIN</div><div className="v">To be added</div></div>
           <div className="ri" style={{ gridColumn: "1/-1" }}><div className="l">Registered Office</div><div className="v">{COMPANY.address}</div></div>
         </div>

@@ -23,6 +23,14 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
   const [tenure, setTenure] = useState(20); // years or months depending on mode
   const [activeType, setActiveType] = useState(0);
   const canvasRef = useRef(null);
+  const [themeTick, setThemeTick] = useState(0);
+
+  // redraw the donut when the theme changes (colors are read from CSS vars)
+  useEffect(() => {
+    const h = () => setThemeTick((t) => t + 1);
+    window.addEventListener("tc-theme-change", h);
+    return () => window.removeEventListener("tc-theme-change", h);
+  }, []);
 
   // computed values
   const P = clampNum(Number(amount), 50000, 50000000, 2500000);
@@ -41,6 +49,10 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
     const c = canvasRef.current;
     if (!c) return;
     const ctx = c.getContext("2d");
+    const cs = getComputedStyle(document.documentElement);
+    const trackCol = (cs.getPropertyValue("--track") || "").trim() || "#1b2a55";
+    const textCol = (cs.getPropertyValue("--text") || "").trim() || "#fff";
+    const mutedCol = (cs.getPropertyValue("--muted") || "").trim() || "#A4A7B8";
     const dpr = window.devicePixelRatio || 1;
     const size = 170;
     if (c.width !== size * dpr) {
@@ -56,7 +68,7 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
     const pFrac = total > 0 ? P / total : 1;
     ctx.beginPath();
     ctx.arc(cx, cy, rad, 0, Math.PI * 2);
-    ctx.strokeStyle = "#1b2a55";
+    ctx.strokeStyle = trackCol;
     ctx.lineWidth = lw;
     ctx.stroke();
     const start = -Math.PI / 2;
@@ -69,15 +81,15 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
     ctx.lineWidth = lw;
     ctx.lineCap = "round";
     ctx.stroke();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = textCol;
     ctx.font = "700 20px Sora, sans-serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(Math.round(pFrac * 100) + "%", cx, cy - 7);
-    ctx.fillStyle = "#A4A7B8";
+    ctx.fillStyle = mutedCol;
     ctx.font = "500 11px Inter, sans-serif";
     ctx.fillText("Principal", cx, cy + 12);
-  }, [P, totalInt]);
+  }, [P, totalInt, themeTick]);
 
   const pickType = (i) => {
     setActiveType(i);
@@ -95,7 +107,7 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
   return (
     <div className={embedded ? "" : "card reveal"} style={embedded ? undefined : { padding: "clamp(22px,4vw,40px)" }}>
       <div style={{ marginBottom: 26 }}>
-        <label style={{ fontSize: 13.5, fontWeight: 600, color: "#d7d9e6", display: "block", marginBottom: 10 }}>
+        <label style={{ fontSize: 13.5, fontWeight: 600, color: "var(--label)", display: "block", marginBottom: 10 }}>
           Select loan type
         </label>
         <div className="tenure-toggle">
@@ -174,7 +186,7 @@ export default function EmiCalculator({ embedded = false, onApplyClick }) {
                 <div><b>{fmtINR(P)}</b><span>Principal amount</span></div>
               </div>
               <div className="legend-item">
-                <span className="swatch" style={{ background: "#1b2a55" }} />
+                <span className="swatch" style={{ background: "var(--track)" }} />
                 <div><b>{fmtINR(totalInt || 0)}</b><span>Total interest</span></div>
               </div>
             </div>

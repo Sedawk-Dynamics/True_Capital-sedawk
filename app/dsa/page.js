@@ -8,7 +8,7 @@ import { DSA_TYPES, DSA_BENEFITS, DSA_ELIGIBILITY, DSA_STEPS } from "@/lib/data"
 export const metadata = {
   title: "DSA Partner Program",
   description:
-    "Become a DSA (Direct Selling Agent) partner with True Capital & Advisory. Earn attractive payouts on personal, home, business, LAP, education, auto loans and credit cards across 40+ lenders.",
+    "Become a DSA (Direct Selling Agent) partner with True Capital & Advisory. Earn attractive payouts on personal, home, business, LAP, education, auto loans and credit cards across 50+ lenders.",
 };
 
 export default function DsaPage() {
@@ -17,7 +17,7 @@ export default function DsaPage() {
       <SectionHead
         eyebrow="DSA Partner Program"
         title={<>Become a <span className="grad">DSA Partner</span></>}
-        sub="Join our Direct Selling Agent network and earn attractive payouts by referring customers across loans and credit cards — backed by 40+ banks & NBFCs."
+        sub="Join our Direct Selling Agent network and earn attractive payouts by referring customers across loans and credit cards — backed by 50+ banks & NBFCs."
       />
 
       {/* DSA product types */}
