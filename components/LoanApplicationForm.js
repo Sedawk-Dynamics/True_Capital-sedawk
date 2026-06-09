@@ -62,16 +62,7 @@ const SECTIONS = [
     fields: [
       { name: "empType", label: "Employment Type", options: ["Salaried", "Self-Employed", "Business", "Other"] },
       { name: "company", label: "Company / Business Name", placeholder: "Employer or business name" },
-      { name: "income", label: "Monthly Income (₹)", type: "number", placeholder: "e.g. 60000" },
-    ],
-  },
-  {
-    title: "Loan Details", icon: "cash",
-    fields: [
-      { name: "loanType", label: "Loan Type", req: true, vtype: "required", loans: true, placeholder: "Select loan type…" },
-      { name: "loanAmount", label: "Loan Amount (₹)", type: "number", placeholder: "e.g. 1500000" },
-      { name: "tenure", label: "Tenure (months)", type: "number", placeholder: "e.g. 60" },
-      { name: "purpose", label: "Purpose of Loan", type: "textarea", full: true, placeholder: "Briefly describe the purpose" },
+      { name: "businessAddress", label: "Business Address", type: "textarea", full: true, placeholder: "Business / office address" },
     ],
   },
   {
@@ -199,7 +190,7 @@ export default function LoanApplicationForm({ initialLoan = "" }) {
       </div>
 
       <div className="card reveal">
-        <button type="submit" className="btn btn-primary btn-block">Submit Loan Application</button>
+        <button type="submit" className="btn btn-primary btn-block">Submit Application</button>
         <p className="form-note" style={{ marginTop: 12 }}>
           By submitting, you agree to our Privacy Policy and consent to be contacted by True Capital &amp; Advisory and
           its lending partners. Approval is subject to lender eligibility criteria.

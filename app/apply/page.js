@@ -13,7 +13,7 @@ export default function ApplyPage() {
     <div className="section container">
       <SectionHead
         eyebrow="Apply online"
-        title={<>Loan <span className="grad">Application</span></>}
+        title={<>Partner <span className="grad">Application</span></>}
         sub="Complete the sections below and upload your documents. Our team will verify your details and guide you through approval."
       />
       <Suspense fallback={<div className="card reveal in">Loading application form…</div>}>

@@ -1,0 +1,9 @@
+Save your logo image in this folder as exactly:  logo.png
+
+Tips for the best result on the dark header:
+- Use a TRANSPARENT background (not white) so it doesn't show as a white box.
+- Crop tightly to the logo (remove the big white padding around it).
+- A horizontal or mark-only version works best in the navbar.
+
+Once public/logo.png exists, refresh the site — it is picked up automatically.
+(Until then, the built-in SVG logo is shown as a fallback.)
