@@ -139,7 +139,7 @@ export default function LoanApplicationForm({ initialLoan = "" }) {
       <div className="form-success">
         <div className="check"><Icon name="check" strokeWidth={2.5} /></div>
         <h3>Application submitted</h3>
-        <p>Thank you! Your loan application has been received. Our team will verify your details and contact you shortly with the next steps.</p>
+        <p>Thank you! Our team will contact you within 24 hours.</p>
         <a href={`https://wa.me/${COMPANY.whatsappIntl}`} target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-sm" style={{ marginTop: 16 }}>
           Chat on WhatsApp
         </a>

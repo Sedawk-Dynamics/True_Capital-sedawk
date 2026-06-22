@@ -186,12 +186,25 @@ main{padding-top:72px}
   border-bottom:1px solid transparent;
 }
 .nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-head);letter-spacing:-0.01em}
 .brand .logo{width:44px;height:44px;flex:none}
-.brand-logo{height:84px;width:auto;flex:none;display:block;background:#fff;border-radius:12px;padding:4px 12px;box-shadow:0 1px 5px rgba(0,0,0,.16)}
-.foot-brand .brand-logo{height:96px}
-@media(max-width:520px){.brand-logo{height:64px;padding:3px 9px}}
+/* nudge the mark down a touch so it reads level with the nav link text */
+.brand-logo{width:auto;flex:none;display:block;border-radius:10px;position:relative;top:9px}
+/* theme-aware sizing: the dark logo (white card) carries internal padding, so
+   it's sized larger than the light logo to look visually balanced */
+.brand-logo-light{display:none;height:54px}
+.brand-logo-dark{height:72px}
+.foot-brand .brand-logo-light{height:60px}
+.foot-brand .brand-logo-dark{height:84px}
+:root[data-theme="light"] .brand-logo-light{display:block}
+:root[data-theme="light"] .brand-logo-dark{display:none}
+@media(max-width:520px){
+  .brand-logo-light{height:42px}
+  .brand-logo-dark{height:56px}
+  .foot-brand .brand-logo-light{height:48px}
+  .foot-brand .brand-logo-dark{height:64px}
+}
 .brand-text{display:flex;flex-direction:column;line-height:1.06}
 .brand-name{font-size:18px;font-weight:800;letter-spacing:.02em}
 .brand-name .cap{color:var(--blue-2)}

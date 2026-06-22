@@ -83,10 +83,10 @@ export default function Navbar() {
             <Icon name="verify" strokeWidth={2} />
             CIBIL Score
           </Link>
-          <a href={`tel:${COMPANY.phoneIntl}`} className="btn btn-ghost btn-sm" aria-label="Call now">
+          {/* <a href={`tel:${COMPANY.phoneIntl}`} className="btn btn-ghost btn-sm" aria-label="Call now">
             <Icon name="phone" strokeWidth={2} />
             Call
-          </a>
+          </a> */}
           <Link href="/apply" className="btn btn-primary btn-sm nav-apply">
             Apply Now
           </Link>
