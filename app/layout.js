@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
         {/* set theme before first paint — defaults to dark, remembers the user's choice */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('tc-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}`,
+            __html: `try{var t=localStorage.getItem('tc-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}`,
           }}
         />
         <LeadProvider>

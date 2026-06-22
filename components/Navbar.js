@@ -43,6 +43,7 @@ export default function Navbar() {
 
   const isActive = (href) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
+  
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`}>
       <div className="container nav-inner">

@@ -186,7 +186,7 @@ main{padding-top:72px}
   border-bottom:1px solid transparent;
 }
 .nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:96px}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-head);letter-spacing:-0.01em}
 .brand .logo{width:44px;height:44px;flex:none}
 /* nudge the mark down a touch so it reads level with the nav link text */
@@ -194,7 +194,7 @@ main{padding-top:72px}
 /* theme-aware sizing: the dark logo (white card) carries internal padding, so
    it's sized larger than the light logo to look visually balanced */
 .brand-logo-light{display:none;height:54px}
-.brand-logo-dark{height:72px}
+.brand-logo-dark{height:72px;top:16px}
 .foot-brand .brand-logo-light{height:60px}
 .foot-brand .brand-logo-dark{height:84px}
 :root[data-theme="light"] .brand-logo-light{display:block}
