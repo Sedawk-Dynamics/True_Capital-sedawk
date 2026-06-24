@@ -51,6 +51,9 @@ export default function Footer() {
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms &amp; Conditions</Link>
+            <Link href="/disclaimer">Disclaimer</Link>
+            <Link href="/grievance">Grievance Redressal</Link>
           </div>
 
           <div>
@@ -77,13 +80,16 @@ export default function Footer() {
             <div className="fc"><Icon name="phone" strokeWidth={2} /><a href={`tel:${COMPANY.phoneIntl}`}>{COMPANY.phoneDisplay}</a></div>
             <div className="fc"><Icon name="whatsapp" strokeWidth={2} /><a href={`https://wa.me/${COMPANY.whatsappIntl}`} target="_blank" rel="noopener noreferrer">{COMPANY.phoneDisplay}</a></div>
             <div className="fc"><Icon name="mail" strokeWidth={2} /><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></div>
+            <div className="fc"><Icon name="mail" strokeWidth={2} /><a href={`mailto:${COMPANY.emailSupport}`}>{COMPANY.emailSupport}</a></div>
+            <div className="fc"><Icon name="mail" strokeWidth={2} /><a href={`mailto:${COMPANY.emailGrievance}`}>{COMPANY.emailGrievance}</a></div>
             <div className="fc"><Icon name="clock" strokeWidth={2} /><span>Mon–Sat: 9 AM – 6 PM • Sun: Closed</span></div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 True Capital &amp; Advisory Pvt Ltd. All rights reserved.</p>
-          <p>Incorporated 2026 • Haridwar, Uttarakhand</p>
+          <p>© 2026 True Capital &amp; Advisory Pvt Ltd. All Rights Reserved.</p>
+          <p>CIN: {COMPANY.cin}</p>
+          <p className="foot-regoffice">Registered Office: {COMPANY.registeredOffice}</p>
         </div>
       </div>
       <div className="disclaimer">

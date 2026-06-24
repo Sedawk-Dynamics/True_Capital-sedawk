@@ -38,7 +38,7 @@ export default function ContactPage() {
           </div>
           <div className="ci-item">
             <div className="icon-chip"><Icon name="mail" strokeWidth={2} /></div>
-            <div><b>Email</b><p><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></p></div>
+            <div><b>Email</b><p><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a><br /><a href={`mailto:${COMPANY.emailSupport}`}>{COMPANY.emailSupport}</a><br /><a href={`mailto:${COMPANY.emailGrievance}`}>{COMPANY.emailGrievance}</a></p></div>
           </div>
           <div className="ci-item">
             <div className="icon-chip"><Icon name="clock" strokeWidth={2} /></div>
