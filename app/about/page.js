@@ -4,6 +4,7 @@ import { FeatureCard } from "@/components/ServiceCard";
 import { WHY, TEAM, COMPANY, initials } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us",
   description:
     "True Capital & Advisory Pvt Ltd is a professionally managed financial services and advisory company delivering reliable, transparent, growth-oriented solutions across India.",

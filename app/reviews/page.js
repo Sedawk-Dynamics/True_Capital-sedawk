@@ -3,6 +3,7 @@ import Reviews from "@/components/Reviews";
 import { COMPANY } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/reviews" },
   title: "Customer Reviews",
   description:
     "Read reviews from individuals and businesses across Uttarakhand and beyond who trust True Capital & Advisory for their loan and financial needs.",

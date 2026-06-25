@@ -16,6 +16,7 @@ export function generateMetadata({ params }) {
   return {
     title: dsa.t,
     description: `Become a ${dsa.t} with True Capital & Advisory. ${dsa.d} Quick onboarding, training and transparent payouts across 50+ lenders.`,
+    alternates: { canonical: `/dsa/${dsa.slug}` },
   };
 }
 

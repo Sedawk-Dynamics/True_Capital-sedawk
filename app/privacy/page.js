@@ -2,6 +2,7 @@ import SectionHead from "@/components/SectionHead";
 import { COMPANY } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
   description:
     "Privacy Policy of True Capital & Advisory Pvt Ltd — how we collect, use, store and protect your personal and financial information.",

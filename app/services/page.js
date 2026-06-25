@@ -3,6 +3,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { LOAN_SERVICES, OTHER_SERVICES } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/services" },
   title: "Services",
   description:
     "Complete financial solutions — Home, Personal, Business & MSME loans, LAP, car & education loans, project finance, plus DSA, insurance, recovery, verification and wealth advisory.",

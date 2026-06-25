@@ -6,6 +6,7 @@ import DsaRegister from "@/components/DsaRegister";
 import { DSA_TYPES, DSA_BENEFITS, DSA_ELIGIBILITY, DSA_STEPS } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/dsa" },
   title: "DSA Partner Program",
   description:
     "Become a DSA (Direct Selling Agent) partner with True Capital & Advisory. Earn attractive payouts on personal, home, business, LAP, education, auto loans and credit cards across 50+ lenders.",

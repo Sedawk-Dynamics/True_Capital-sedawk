@@ -72,6 +72,7 @@ export default function LeadForm({
       [values.firstName, values.lastName].filter(Boolean).join(" ").trim() ||
       "—";
     addLead({
+      ...values,
       name: fullName,
       mobile: values.mobile || "—",
       source,

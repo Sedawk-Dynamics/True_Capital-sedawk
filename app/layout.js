@@ -1,5 +1,6 @@
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
+import { COMPANY } from "@/lib/data";
 import { LeadProvider } from "@/lib/LeadContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,7 +12,7 @@ const sora = Sora({ subsets: ["latin"], weight: ["400", "500", "600", "700", "80
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-inter", display: "swap" });
 
 export const metadata = {
-  metadataBase: new URL("https://truecapital.com"),
+  metadataBase: new URL(COMPANY.url),
   title: {
     default: "True Capital & Advisory Pvt Ltd — Fast Loan. Trusted Solution.",
     template: "%s | True Capital & Advisory",
@@ -22,10 +23,27 @@ export const metadata = {
     "loan consulting", "home loan", "personal loan", "MSME loan", "business loan",
     "DSA services", "loan against property", "EMI calculator", "Haridwar", "financial advisory", "private funding",
   ],
-  authors: [{ name: "True Capital & Advisory Pvt Ltd" }],
+  authors: [{ name: "True Capital & Advisory Pvt Ltd", url: COMPANY.url }],
+  creator: "True Capital & Advisory Pvt Ltd",
+  publisher: "True Capital & Advisory Pvt Ltd",
+  applicationName: "True Capital & Advisory",
+  category: "Finance",
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
+    url: "/",
     siteName: "True Capital & Advisory",
     title: "True Capital & Advisory Pvt Ltd — Fast Loan. Trusted Solution.",
     description: "Fast loans and trusted financial solutions across India. Quick approval, transparent process, pan-India support.",
@@ -35,10 +53,47 @@ export const metadata = {
     title: "True Capital & Advisory Pvt Ltd",
     description: "Fast Loan. Trusted Solution. Loans & financial advisory across India.",
   },
+  // Add your Google Search Console token here once you verify the domain:
+  // verification: { google: "YOUR_GOOGLE_SITE_VERIFICATION_TOKEN" },
 };
 
 export const viewport = {
   themeColor: "#0A0A0F",
+};
+
+// Organisation / LocalBusiness structured data for rich results & local SEO.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "@id": `${COMPANY.url}/#organization`,
+  name: COMPANY.name,
+  url: COMPANY.url,
+  logo: `${COMPANY.url}/TC.png`,
+  image: `${COMPANY.url}/TC.png`,
+  description:
+    "Loan advisory, DSA services and financial solutions — home, personal, business & MSME loans, LAP, project finance, insurance and wealth advisory across India.",
+  telephone: COMPANY.phoneIntl,
+  email: COMPANY.email,
+  priceRange: "₹₹",
+  areaServed: "IN",
+  currenciesAccepted: "INR",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2nd Floor, H.No. 2474, Lal Mandir Road, Nikunj Vihar, Arya Nagar",
+    addressLocality: "Haridwar",
+    addressRegion: "Uttarakhand",
+    postalCode: "249407",
+    addressCountry: "IN",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: COMPANY.lat, longitude: COMPANY.lng },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -52,7 +107,12 @@ export default function RootLayout({ children }) {
         Use next/script with strategy="afterInteractive".
       */}
       <body>
-        {/* set theme before first paint — defaults to dark, remembers the user's choice */}
+        {/* Organisation / LocalBusiness structured data (rich results + local SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* set theme before first paint — defaults to light, remembers the user's choice */}
         <script
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('tc-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}`,

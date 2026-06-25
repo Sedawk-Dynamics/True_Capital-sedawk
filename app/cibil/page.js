@@ -3,6 +3,7 @@ import Icon from "@/components/Icon";
 import CibilCheck from "@/components/CibilCheck";
 
 export const metadata = {
+  alternates: { canonical: "/cibil" },
   title: "Check Your CIBIL Score",
   description:
     "Check your CIBIL / credit score for free with True Capital & Advisory. A soft enquiry that won't affect your score, with guidance on improving eligibility.",

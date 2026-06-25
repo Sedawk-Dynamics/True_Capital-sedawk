@@ -2,6 +2,7 @@ import SectionHead from "@/components/SectionHead";
 import BlogList from "@/components/BlogList";
 
 export const metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog — Loan Guides, Finance & Credit Tips",
   description:
     "Practical, India-relevant advice on home loans, MSME finance, credit scores, balance transfers and insurance from the True Capital advisory team.",

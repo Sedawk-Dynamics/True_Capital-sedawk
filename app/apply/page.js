@@ -3,6 +3,7 @@ import SectionHead from "@/components/SectionHead";
 import ApplySection from "@/components/ApplySection";
 
 export const metadata = {
+  alternates: { canonical: "/apply" },
   title: "Apply for a Loan",
   description:
     "Apply for a loan online with True Capital & Advisory. Complete your personal, address, KYC, employment, loan and bank details and upload documents — quick and secure.",

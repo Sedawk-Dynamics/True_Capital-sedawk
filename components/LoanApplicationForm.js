@@ -122,6 +122,7 @@ export default function LoanApplicationForm({ initialLoan = "" }) {
       return;
     }
     addLead({
+      ...values,
       name: `${values.firstName} ${values.lastName}`.trim() || "—",
       mobile: values.mobile || "—",
       source: "Loan Application",

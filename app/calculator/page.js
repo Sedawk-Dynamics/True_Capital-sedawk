@@ -2,6 +2,7 @@ import SectionHead from "@/components/SectionHead";
 import EmiCalculator from "@/components/EmiCalculator";
 
 export const metadata = {
+  alternates: { canonical: "/calculator" },
   title: "EMI Calculator",
   description:
     "Free EMI calculator — estimate your monthly instalment, total interest and total payable amount for home, personal, business and other loans instantly.",

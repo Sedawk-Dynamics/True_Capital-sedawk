@@ -4,6 +4,7 @@ import LeadForm from "@/components/LeadForm";
 import { COMPANY } from "@/lib/data";
 
 export const metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact Us",
   description:
     "Contact True Capital & Advisory Pvt Ltd — visit our Haridwar office, call or WhatsApp +91 97581 89999, or send an online enquiry. Mon–Sat, 9 AM – 6 PM.",
