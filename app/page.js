@@ -104,7 +104,11 @@ export default function HomePage() {
 
       {/* TESTIMONIALS */}
       <div className="section container">
-        <SectionHead eyebrow="Client stories" title={<>What Our <span className="grad">Customers</span> Say</>} />
+        <SectionHead
+          eyebrow="Client Testimonials"
+          title={<>Success Stories Shared by <span className="grad">Our Customers</span></>}
+          sub="Feel free to customize the text with actual client testimonials, ensuring you have their permission to use their names and occupations"
+        />
         <Testimonials />
       </div>
 
