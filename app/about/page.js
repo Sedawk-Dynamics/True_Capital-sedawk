@@ -110,7 +110,7 @@ export default function AboutPage() {
           <div className="ri"><div className="l">Company Name</div><div className="v">True Capital &amp; Advisory Pvt Ltd</div></div>
           <div className="ri"><div className="l">Incorporated</div><div className="v">2026, India</div></div>
           <div className="ri"><div className="l">CIN / Registration No.</div><div className="v">U64990UT2026PTC021056</div></div>
-          <div className="ri"><div className="l">GSTIN</div><div className="v">To be added</div></div>
+          <div className="ri"><div className="l">GSTIN</div><div className="v">05AAMCT8986H1ZK</div></div>
           <div className="ri" style={{ gridColumn: "1/-1" }}><div className="l">Registered Office</div><div className="v">{COMPANY.address}</div></div>
         </div>
       </div>
